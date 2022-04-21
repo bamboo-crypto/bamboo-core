@@ -4,7 +4,7 @@
 #include <atomic>
 #include <thread>
 #include <random>
-#include "../external/ed25519/ed25519.h" //https://github.com/orlp/ed25519
+#include "external/ed25519/ed25519.h" //https://github.com/orlp/ed25519
 using namespace std;
 
 #define SLOPPY_TASK_CYCLE 1000

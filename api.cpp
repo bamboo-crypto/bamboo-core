@@ -2,7 +2,7 @@
 #include <iostream>
 #include <sstream>
 #include "api.hpp"
-#include "../external/http.hpp"
+#include "external/http.hpp"
 #include "constants.hpp"
 #include "helpers.hpp"
 using namespace std;

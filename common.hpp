@@ -1,6 +1,6 @@
 #pragma once
-#include "../external/json.hpp"
-#include "../external/bigint/bigint.h"
+#include "external/json.hpp"
+#include "external/bigint/bigint.h"
 #include "openssl/sha.h"
  #include "openssl/ripemd.h"
 #include <map>
