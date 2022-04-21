@@ -5,7 +5,6 @@
 #include <thread>
 #include <random>
 #include "../external/ed25519/ed25519.h" //https://github.com/orlp/ed25519
-#include "../external/sha256/sha2.hpp" 
 using namespace std;
 
 #define SLOPPY_TASK_CYCLE 1000
@@ -16,15 +15,6 @@ SHA256Hash SHA256(const char* buffer, size_t len) {
     SHA256_Init(&sha256);
     SHA256_Update(&sha256, buffer, len);
     SHA256_Final(ret.data(), &sha256);
-    return ret;
-}
-
-std::array<uint8_t, 32> SHA256Fast(const char* buffer, size_t len) {
-    std::array<uint8_t, 32> ret;
-    sha256_ctx sha256;
-    sha256_init(&sha256);
-    sha256_update(&sha256, (const unsigned char*) buffer, len);
-    sha256_final(&sha256, ret.data());
     return ret;
 }
 
@@ -209,7 +199,7 @@ bool verifyHash(SHA256Hash& target, SHA256Hash& nonce, uint8_t challengeSize) {
 
 
 SHA256Hash mineHash(SHA256Hash target, unsigned char challengeSize, std::function<void(int)>incrementHashCount, std::function<bool()> stop) {
-    // By @Shifu!
+    // By @CoinfuMasterShifu!
     vector<uint8_t> concat;
     SHA256Hash solution;
     std::random_device t_rand;
