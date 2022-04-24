@@ -1,4 +1,4 @@
 #pragma once
-#include "../core/common.hpp"
+#include "common.hpp"
 
 json getConfig(int argc, char**argv);
