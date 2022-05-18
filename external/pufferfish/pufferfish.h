@@ -30,8 +30,8 @@
 #include <string.h>
 #include <errno.h>
 
-#include <openssl/sha.h>
-#include <openssl/hmac.h>
+#include "openssl/sha.h"
+#include "openssl/hmac.h"
 
 #define PF_ID "$PF2$"
 #define PF_ID_SZ strlen(PF_ID)
