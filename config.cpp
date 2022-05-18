@@ -116,6 +116,7 @@ json getConfig(int argc, char**argv) {
     } else if (testnet) {
         config["hostSources"].push_back("http://54.185.169.234:3000/peers");
     } else {
+        config["hostSources"].push_back("https://mrpandabear.org/node/peers");
         config["hostSources"].push_back("http://ec2-35-84-249-159.us-west-2.compute.amazonaws.com:3000/peers");
         config["hostSources"].push_back("http://ec2-44-227-179-62.us-west-2.compute.amazonaws.com:3000/peers");
         config["hostSources"].push_back("http://ec2-54-189-82-240.us-west-2.compute.amazonaws.com:3000/peers");
